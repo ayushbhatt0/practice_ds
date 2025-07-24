@@ -112,14 +112,15 @@ data2=pd.DataFrame(dataf)
 # print(data2)
 
 
-#                 # filling missing values
-        # filling default values
-data2['age'].fillna(data2['age'].mean(), inplace=True)
-print(data2)
+# #                 # filling missing values
+#         # filling default values
+# data2['age'].fillna(data2['age'].mean(), inplace=True)
+# print(data2)
 
 #         # filling estimate value
 # data2['age']= data2['age'].interpolate(method='linear',implace=True)
 # print(data2)
+
 
 
 #                 # sorting column
@@ -139,11 +140,17 @@ print(data2)
 
 #                         # merging and joining
 #         # merging two df
-# coustomer=pd.read_csv(r"C:\Users\acer\Downloads\customers-1000.csv",encoding="UTF-8")
-# people=pd.read_csv(r"C:\Users\acer\Downloads\people-1000.csv",encoding='UTF-8')
+coustomer=pd.read_csv(r"C:\Users\acer\Documents\practice data\customers-1000.csv",encoding="UTF-8")
+people=pd.read_csv(r"C:\Users\acer\Documents\practice data\people-1000.csv",encoding='UTF-8')
 
 # # print(coustomer.head(),coustomer.tail())
 # # print(people.head(),people.tail())
 
 # common=pd.merge(coustomer,people,on='Date of birth',how='inner')
 # print(common)
+
+
+
+        # concate dataframes
+data3=pd.concat([coustomer,people],ignore_index=True)
+print(data3)
