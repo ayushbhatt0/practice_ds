@@ -11,129 +11,129 @@ dataf={'name':['ayush',None,'ram','shyam'],
        'fees':[450,230,650,320]}
 
 data2=pd.DataFrame(dataf)
-# print(data2)
+print(data2)
 
-#         # display dataset
-# print(data)
-
-
-#         # save data
-# data.to_json("file_name.json",index=False)
+        # display dataset
+print(data)
 
 
-
-#         # get first and last N rows of dataset
-# print(data.head(20))    # print first 20 rows
-# print(data.tail(30))     # print last 30 rows  
+        # save data
+data.to_json("file_name.json",index=False)
 
 
 
-
-#                 # to get overview of dataset
-# print(data.info())
-
-
-
-#                 # to get discriptive statistics of dataframe
-# ds = data.describe()
-# print(ds)
-
-
-
-#                 # to check the columns of dataframe                         
-# col =data.columns
-# print(col)
-
-
-
-#                # selecting a column
-# # single col 
-# name = data['Name']                                 
-# print(name)
-
-# # multiple columns
-# pro = data[["Name","Availability"]]                            
-# print(pro)
+        # get first and last N rows of dataset
+print(data.head(20))    # print first 20 rows
+print(data.tail(30))     # print last 30 rows  
 
 
 
 
-#                 # filtering rows by conditions
-# # single condition
-# print(data[data["Availability"] == "backorder"])
-
-# # multiple conditions
-# filter = data[(data['Availability']=='in_stock') & (data['Internal ID']>40)]
-# print(filter)
+                # to get overview of dataset
+print(data.info())
 
 
 
-#                         # modifing 
-
-#                 # adding column
-# #  by square bracket
-# data2['village'] = ['pagari','up','maindkhal','kandi']
-# print(data2)
-
-# #  by INSERT  method
-# data2.insert(1,'state',['uk','up','uk','uk'])
-# print(data2)
+                # to get discriptive statistics of dataframe
+ds = data.describe()
+print(ds)
 
 
 
-#                 # removing colomn
-# data2.drop(columns=["age",'course'],inplace=True)
-# print(data2)
-
-
-#                 # modifing the column
-# # specific vlaue
-# data2.loc[2,'course']='bba'
-# print(data2)
-
-# # whole column
-# data2['fees']= data2['fees']*1.6
-# print(data2)
+                # to check the columns of dataframe                         
+col =data.columns
+print(col)
 
 
 
-#                         # handling missing values
-#                 # finding missing values
-# # 1>> isnull()      >> return bolean values
-# print(data2.isnull())
+               # selecting a column
+# single col 
+name = data['Name']                                 
+print(name)
 
-# # 2 .>>  isnull().sum   >> retuen count of missing values in each column
-# print(data2.isnull().sum())
-
-
-
-#                 # removing null values
-# data2.dropna(inplace=True)
-# print(data2)
-
-
-# #                 # filling missing values
-#         # filling default values
-# data2['age'].fillna(data2['age'].mean(), inplace=True)
-# print(data2)
-
-#         # filling estimate value
-# data2['age']= data2['age'].interpolate(method='linear',implace=True)
-# print(data2)
+# multiple columns
+pro = data[["Name","Availability"]]                            
+print(pro)
 
 
 
-#                 # sorting column
-#         # single column
-# data2.sort_values(by="age",ascending=True,inplace=True)
-# print(data2)
+
+                # filtering rows by conditions
+# single condition
+print(data[data["Availability"] == "backorder"])
+
+# multiple conditions
+filter = data[(data['Availability']=='in_stock') & (data['Internal ID']>40)]
+print(filter)
 
 
 
-#                         # grouping 
-#         # basic grouping
-# grouped=data.groupby('Internal ID')['Name'].sum()
-# print(grouped)
+                        # modifing 
+
+                # adding column
+#  by square bracket
+data2['village'] = ['pagari','up','maindkhal','kandi']
+print(data2)
+
+#  by INSERT  method
+data2.insert(1,'state',['uk','up','uk','uk'])
+print(data2)
+
+
+
+                # removing colomn
+data2.drop(columns=["age",'course'],inplace=True)
+print(data2)
+
+
+                # modifing the column
+# specific vlaue
+data2.loc[2,'course']='bba'
+print(data2)
+
+# whole column
+data2['fees']= data2['fees']*1.6
+print(data2)
+
+
+
+                        # handling missing values
+                # finding missing values
+# 1>> isnull()      >> return bolean values
+print(data2.isnull())
+
+# 2 .>>  isnull().sum   >> retuen count of missing values in each column
+print(data2.isnull().sum())
+
+
+
+                # removing null values
+data2.dropna(inplace=True)
+print(data2)
+
+
+#                 # filling missing values
+        # filling default values
+data2['age'].fillna(data2['age'].mean(), inplace=True)
+print(data2)
+
+        # filling estimate value
+data2['age']= data2['age'].interpolate(method='linear',implace=True)
+print(data2)
+
+
+
+                # sorting column
+        # single column
+data2.sort_values(by="age",ascending=True,inplace=True)
+print(data2)
+
+
+
+                        # grouping 
+        # basic grouping
+grouped=data.groupby('Internal ID')['Name'].sum()
+print(grouped)
 
 
 
@@ -143,11 +143,11 @@ data2=pd.DataFrame(dataf)
 coustomer=pd.read_csv(r"C:\Users\acer\Documents\practice data\customers-1000.csv",encoding="UTF-8")
 people=pd.read_csv(r"C:\Users\acer\Documents\practice data\people-1000.csv",encoding='UTF-8')
 
-# # print(coustomer.head(),coustomer.tail())
-# # print(people.head(),people.tail())
+# print(coustomer.head(),coustomer.tail())
+# print(people.head(),people.tail())
 
-# common=pd.merge(coustomer,people,on='Date of birth',how='inner')
-# print(common)
+common=pd.merge(coustomer,people,on='Date of birth',how='inner')
+print(common)
 
 
 
