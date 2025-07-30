@@ -1,3 +1,7 @@
+                        # This file is part of the practice dataset for learning pandas.
+#                         # It contains various operations and manipulations using pandas library.
+
+
 import pandas as pd
 
         # reading a csv file 
